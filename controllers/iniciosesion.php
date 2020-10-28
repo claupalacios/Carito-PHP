@@ -1,0 +1,22 @@
+<?php
+
+//controllers/inicio.php
+
+require '../fw/fw.php';
+require '../models/personas.php';
+require '../views/inicio.php';
+require '../views/paginaprincipal.php';
+
+if(isset($_POST['mail'])&& isset($_POST['contrasena'])){
+	if(!isset($_POST['mail'])) die("error1");
+	if(!isset($_POST['contrasena'])) die("error2");
+
+$p=new personas;	
+$p->entrar($_POST['mail'],$_POST['contrasena']);
+
+header('Location: paginaprincipal.php');
+
+}else{
+	$form = new inicio;
+	$form ->render();
+}
