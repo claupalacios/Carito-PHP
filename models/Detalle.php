@@ -126,7 +126,7 @@ class Detalle extends Model {
 	}	
 	
 	public function pedidos(){
-		$this->db->query("SELECT d.id_pedido, c.descripcion, m.nombre, d.cantidad, m.precio, p.direccion
+		$this->db->query("SELECT d.id_pedido, c.descripcion, m.nombre, d.cantidad, m.precio, p.direccion,p.despachado
 							FROM `detalle_pedidos`d
 							left JOIN menu m ON d.id_menu = m.id_menu
 							LEFT JOIN comidas c on m.tipo = c.tipo

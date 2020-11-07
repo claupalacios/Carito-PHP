@@ -14,7 +14,7 @@ if(isset($_POST['mail'])&& isset($_POST['contrasena'])){
 $p=new personas;	
 $p->entrar($_POST['mail'],$_POST['contrasena']);
 
-header('Location: paginaprincipal.php');
+header('Location: paginaprincipalencargado.php');
 
 }else{
 	$form = new inicio;

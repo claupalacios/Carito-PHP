@@ -18,8 +18,8 @@
 
 			<?php foreach($this->menu as $e) { 
 			if($e['tipo']== $_GET['comidas']) { ?>
-		<tr><td width="40"  align="center"><a href="modificarmenu.php?id=<?=$e['id_menu']?>"><img src="/proyecto/html/imagenes/lapiz.png" width="22" height="22"></a></td>
-			<td width="40" align="center"><a href="borrarmenu.php?id=<?=$e['id_menu']?>"><img src="/proyecto/html/imagenes/tacho.png" width="22" height="22"></a></td>
+		<tr><td width="40"  align="center"><a href="modificarmenu.php?id=<?=$e['id_menu']?>"><img src="/restaurante/html/imagenes/lapiz.png" width="22" height="22"></a></td>
+			<td width="40" align="center"><a href="borrarmenu.php?id=<?=$e['id_menu']?>"><img src="/restaurante/html/imagenes/tacho.png" width="22" height="22"></a></td>
 		
 			<td><?= $e['nombre'] ?></a></td>
 			<td><?= $e['precio'] ?></td>

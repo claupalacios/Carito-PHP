@@ -50,6 +50,12 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Quienes Somos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sucursales.php">Sucursales</a>
+      </li>      
+      <li class="nav-item">
+        <a class="nav-link" href="iniciosesion.php">Ingreso para encargados</a>
+      </li>
     </ul>
   </div>
 </nav>
