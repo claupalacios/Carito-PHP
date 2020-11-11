@@ -1,12 +1,5 @@
 <?php
 // MODELS/Empleados.php
-/**
-* Modelo de datos de la clase Empleados
-*
-* @package Restaurante
-* @author Cinthia Palacios
-* @version 1.0
-*/
 class Empleados extends Model {
 	
 	/**

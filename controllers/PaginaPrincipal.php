@@ -4,14 +4,13 @@
 
 require '../fw/fw.php';
 require '../views/PaginaPrincipal.php';
-require '../models/Comidas.php'; 
+require '../models/Categorias.php'; 
 
 
-	$com = new Comidas; 
-	$todos = $com->getTodos();
+	$cat = new Categorias; 
+	$todos = $cat->getTodos();
 
-	
 	$v = new PaginaPrincipal();
-	$v->menu = $todos;
+	$v->categorias = $todos;
 	$v->render();
 

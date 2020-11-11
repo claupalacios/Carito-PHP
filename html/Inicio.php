@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Ingreso de Encargados</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
  </head>
  <body>
 
@@ -12,9 +13,10 @@
   <input type="text" name="mail">
 </br>
 <label> Ingrese contraseña:</label>
-<input type="text" name="contrasena">
+<input type="password" name="contrasena">
 </br>
-<input type="submit" value="ACEPTAR" name="a">
+<input class="btn btn-secondary btn-lg active" type="submit" value="Aceptar" name="a">
+<a href="PaginaPrincipal.php" class="btn btn-primary btn-lg active">Volver</a>
 </form>
 
    </body>

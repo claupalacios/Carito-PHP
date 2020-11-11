@@ -8,13 +8,13 @@ class Database{
 	private function __construct(){}
 
 	public static function getInstance(){
-		if(! self::$instance) self::$instance = new Database;     //metodo de clase va con ::
+		if(! self::$instance) self::$instance = new Database;     //metodo de clase va con ::  (static)
 		return self::$instance;
 	}
 
 	private function connectIfNotConnect(){
 		if(!$this->cn)
-		   $this->cn = mysqli_connect("localhost","root","","restaurante");
+		   $this->cn = mysqli_connect("localhost","root","","libreria");
 	}
 
 	public function  query($q){

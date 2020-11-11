@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mostrar Comidas</title>
+	<title>Mostrar Articulos</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<style type="text/css">
 		body {
@@ -22,10 +22,10 @@
 		  </thead>
 		  <tbody>
 			<tr>
-			<?php foreach($this->menu as $e) { 
-				if($e['tipo']== $_GET['comidas']) { ?>
-			<td><a href="agregar.php?id=<?=$e['id_menu']?>&comidas=<?=$_GET['comidas']?>"><?= $e['nombre'] ?></a></td>
-			<td><?= $e['precio'] ?></td>
+			<?php foreach($this->articulos as $a) { 
+				if($a['tipo'] == $_GET['categorias']) { ?>
+			<td><a href="agregar.php?id=<?=$a['id_articulo']?>&categorias=<?=$_GET['categorias']?>"><?= $a['nombre'] ?></a></td>
+			<td><?= $a['precio'] ?></td>
 			</tr>
 
 			<?php } } ?>

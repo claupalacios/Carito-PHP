@@ -1,7 +1,5 @@
 <?php
 
-//controllers/ConFin.php
-
 require '../fw/fw.php';
 require '../views/ContinuarFinalizar.php';
 require '../models/Detalle.php';
@@ -24,7 +22,7 @@ if(isset($_GET['borrar'])){
 
 
 	$v = new ContinuarFinalizar();
-	$v->menu =  $todos;
+	$v->articulos =  $todos;
 	$v->ultimo = $ultimo;
 	$v->cantidad = $cantidad;
 	$v->render();

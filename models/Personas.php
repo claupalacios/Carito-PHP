@@ -1,12 +1,5 @@
 <?php
 // MODELS/Personas.php
-/**
-* Modelo de datos de la clase Personas
-*
-* @package Restaurante
-* @author Cinthia Palacios
-* @version 1.0
-*/
 class Personas extends Model {
 	/**
     * Función que retorna las personas

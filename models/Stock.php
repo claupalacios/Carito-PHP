@@ -1,12 +1,5 @@
 <?php
 // MODELS/Stock.php
-/**
-* Modelo de datos de la clase Stock
-*
-* @package Restaurante
-* @author Cinthia Palacios
-* @version 1.0
-*/
 class Stock extends Model {
 	/**
     * Función que retorna los stock

@@ -4,7 +4,7 @@
 
 class PaginaPrincipal extends View {
 
-		//public $menu;
+		//public $categorias;
 
 
 }

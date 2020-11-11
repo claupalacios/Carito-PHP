@@ -1,12 +1,5 @@
 <?php
 // MODELS/Pedidos.php
-/**
-* Modelo de datos de la clase Pedidos
-*
-* @package Restaurante
-* @author Cinthia Palacios
-* @version 1.0
-*/
 class Pedidos extends Model {
 	/**
     * Función que retorna los pedidos 

@@ -5,7 +5,7 @@ require '../models/Comidas.php';
 require '../models/Empleados.php';
 require '../models/Stock.php';
 
-
+	//if(!isset($_SESSION['']))
 	$com = new Comidas; 
 	$todos = $com->getTodos();
 

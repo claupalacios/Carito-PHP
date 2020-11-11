@@ -1,11 +1,7 @@
- 
-
-<!-- /html/AgergarComidas.php  -->
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Agregar Comidas</title>
+	<title>Agregar Articulos</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<style type="text/css">
 		body {
@@ -19,14 +15,14 @@
 	<div class="card" style="width: 18rem;">
 	  <img class="card-img-top" src="/proyecto/html/imagenes/pizzamuzzarella.png" alt="Imagen de Base de Datos">
 	  <div class="card-body">
-	  	<?php foreach($this->menu as $e) { 
-		if(($e['id_menu']) == $_GET['id']){ ?>
+	  	<?php foreach($this->categorias as $c) { 
+		if(($c['id_menu']) == $_GET['id']){ ?>
 			
-			<h5 class="card-title"><?= $e['nombre']." $". $e['precio']?></h5>
+			<h5 class="card-title"><?= $c['nombre']." $". $c['precio']?></h5>
 		<?php }
 		} ?>
-	    <p class="card-text">Aca va la descripcion de la comida q debe
-	    agregarse a la base de datos.</p>
+	    <!-- <p class="card-text">Descripcion del articulo q debe
+	    agregarse a la base de datos.</p> -->
 	    <form method="GET">
 		<label>Cantidad: </label>
 			<select name="cantidad">
@@ -41,7 +37,7 @@
 			<input type="hidden" name="id_menu" value="<?= $_GET['id'] ?>">
 			<input type="hidden" name="id_pedido" value="<?= $this->ultimo ?>">
 			<input type="submit" value="Agregar" class="btn btn-primary">
-			<a href="comidasAgregadas.php?comidas=<?=$_GET['comidas']?>" class="btn btn-primary">Volver</a>
+			<a href="ArticulosAgregados.php?categorias=<?=$_GET['categorias']?>" class="btn btn-primary">Volver</a>
 		</form>
 	  </div>
 	</div>

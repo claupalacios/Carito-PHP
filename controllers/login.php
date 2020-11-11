@@ -6,7 +6,6 @@ require '../models/Login.php';
 
 
 session_start(); //no olvidar
-//$cn=mysqli_connect("localhost","root","","dario");
 
 if(isset($_POST["mail"])){
     $e=new Login;
@@ -25,7 +24,7 @@ if(isset($_POST["mail"])){
 
 
 
-$e=new Inicio;  //controlador pide datos a modelo
+$e=new Inicio;  //controler pide datos a modelo
 $e->render();
 
 ?>

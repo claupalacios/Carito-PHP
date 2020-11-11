@@ -1,10 +1,8 @@
 <?php
 
-//views/Comidas.php
-
 class ContinuarFinalizar extends View {
 
-	public $menu;
+	public $articulos;
 	public $ultimo;
 	public $cantidad;
 
