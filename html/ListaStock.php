@@ -16,17 +16,17 @@
 		<tr>
 			<th></th><th></th>
 			<th>Nombre</th>
-			<th>Cantidad</th>
+			<th>Stock</th>
 		</tr>
 		<?php
-		 foreach($this->stock as $e) {
+		 foreach($this->articulos as $art) {
 		 ?>
 		 
 		<tr>
-			<td width="40"  align="center"><a href="modificarstock.php?id=<?=$e['id_stock']?>"><img src="/proyecto/html/imagenes/lapiz.png" width="22" height="22"></a></td>
-			<td width="40" align="center"><a href="borrarstock.php?id=<?=$e['id_stock']?>"><img src="/proyecto/html/imagenes/tacho.png" width="22" height="22"></a></td>
-			<td><?= $e['nombre'] ?></td>
-			<td><?= $e['cantidad'] ?></td>
+			<td width="40"  align="center"><a href="modificarstock.php?id=<?=$art['id_articulo']?>"><img src="../html/imagenes/lapiz.png" width="22" height="22"></a></td>
+			<td width="40" align="center"><a href="borrarstock.php?id=<?=$art['id_articulo']?>"><img src="../html/imagenes/tacho.png" width="22" height="22"></a></td>
+			<td><?= $art['nombre'] ?></td>
+			<td><?= $art['stock'] ?></td>
 		</tr>
 		<?php } ?>
 	</table>

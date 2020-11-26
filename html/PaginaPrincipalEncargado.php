@@ -26,16 +26,19 @@
 	          Menu
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <?php foreach($this->menu as $e) { ?>	
-						<a class="dropdown-item" href="listamenu.php?comidas=<?=$e['tipo']?>"><?= $e['descripcion'] ?></a>				
-			  <?php } ?>
+			<?php
+        		foreach($this->categorias as $c) {
+        		?>
+
+          <a class="item-categorias" href="categorias.php?categorias=<?=$c['tipo']?>"><?= $c['descripcion'] ?></a>				
+          <?php } ?>
 	        </div>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="listaempleados.php">Empleados</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="listastock.php">Stock </a>
+	        <a class="nav-link" href="listastock.php">Productos</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="listapedidos.php">Pedidos </a>

@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* ------------------------- Header ------------------------- */
+
+.header-section {
+    background-color: #ffffff;
+
+    .header-navbar {
+        color: #313131;
+        padding: 10px 0;
+
+        display: flex;
+        align-items: center;
+
+        .header-title {
+            display: flex;
+            justify-content: space-around;
+
+            font-size: 40px;
+            font-weight: 800;
+
+            h1 {
+                margin: 45px 0 0 150px;
+            }
+
+
+            .img-title {
+                width: 20%;
+                //margin: 0 20px 0 0;
+                padding: 0 20px 0 0;
+            }
+        }
+
+        .header-options {
+            display: flex;
+
+            align-items: center;
+            justify-items: center;
+
+            a {
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            a:nth-of-type(1) {
+                font-weight: 700;
+                margin: 0 30px 0 0;
+            }
+
+        }
+    }
+}
+
+/* ------------------------- Header ------------------------- */
+
+.navbar {
+    .categorias {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        background-color: tomato;
+
+
+        a {
+            text-decoration: none;
+            color: #313131;
+            margin: 0 15px;
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .botones {
+            display: flex;
+
+        }
+    }
+
+}

@@ -13,10 +13,10 @@
   <input type="text" name="mail">
 </br>
 <label> Ingrese contraseña:</label>
-<input type="password" name="contrasena">
+<input type="text" name="contrasena">
 </br>
-<input class="btn btn-secondary btn-lg active" type="submit" value="Aceptar" name="a">
-<a href="PaginaPrincipal.php" class="btn btn-primary btn-lg active">Volver</a>
+<a href="PaginaPrincipal.php" class="btn btn-secondary btn-lg active">Volver</a>
+<input class="btn btn-primary btn-lg active" type="submit" value="Aceptar" name="a">
 </form>
 
    </body>

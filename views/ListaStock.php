@@ -4,7 +4,7 @@
 
 class ListaStock extends View {
 
-	public $stock;
+	public $articulos;
 
 	
 
