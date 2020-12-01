@@ -3,15 +3,15 @@
 
 require '../fw/fw.php';
 require '../views/MostrarArticulosAgregados.php';
-require '../models/Categorias.php'; 
+require '../models/Articulos.php'; 
 
 
-	$c = new Categorias; //las tablas n a n no tienen esto,()modelos
-	$todos = $c->getTodos();
+	$art = new Articulos; 
+	$todos = $art->getTodos();
 
 
 	$v = new MostrarArticulosAgregados();
-	$v->menu = $todos;
+	$v->articulos = $todos;
 	$v->render();
 
 

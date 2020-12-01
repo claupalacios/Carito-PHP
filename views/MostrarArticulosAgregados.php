@@ -1,9 +1,7 @@
 <?php
 
-//views/Comidas.php
+class MostrarArticulosAgregados extends View {
 
-class MostrarComidasAgregadas extends View {
-
-	public $menu;
+	public $articulos;
 
 }

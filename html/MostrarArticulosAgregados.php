@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mostrar Comidas Agregadas</title>
+	<title>Mostrar Articulos Agregados</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<style type="text/css">
 		body {
@@ -22,10 +22,10 @@
 		  </thead>
 		  <tbody>
 			<tr>
-			<?php foreach($this->menu as $e) { 
-				if($e['tipo']== $_GET['comidas']) { ?>
-			<td><a href="agregarMas.php?id=<?=$e['id_menu']?>&comidas=<?=$_GET['comidas']?>"><?= $e['nombre'] ?></a></td>
-			<td><?= $e['precio'] ?></td>
+			<?php foreach($this->articulos as $art) { 
+				if($art['tipo']== $_GET['articulos']) { ?>
+			<td><a href="agregarMas.php?id=<?=$art['id_articulo']?>&categorias=<?=$_GET['articulos']?>"><?= $art['nombre'] ?></a></td>
+			<td><?= $art['precio'] ?></td>
 			</tr>
 
 			<?php } } ?>
@@ -42,31 +42,3 @@
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-
-<!--<!DOCTYPE html>
-<html>
-<head>
-	<title>MostrarComidasAgregadas</title>
-</head>
-<body>
-
-	<form method="POST">
-		
-		<table border=1>
-
-			<tr><th>Nombre</th><th>Precio</th></tr>
-
-			<?php foreach($this->menu as $e) { 
-				if($e['tipo']== $_GET['comidas']) { ?>
-			<td><a href="agregarMas.php?id=<?=$e['id_menu']?>&comidas=<?=$_GET['comidas']?>"><?= $e['nombre'] ?></a></td>
-			<td><?= $e['precio'] ?></td>
-			</tr>
-
-			<?php } } ?>
-		</table>
-
-	<a href="ContinuarAgregando.php">Volver</a>
-	
-	
-</body>
-</html>-->

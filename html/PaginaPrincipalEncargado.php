@@ -14,34 +14,18 @@
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="#">Puli's Food</a>
+	  <a class="navbar-brand" href="#">Puli's Food (EMPLEADOS)</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
 	    <ul class="navbar-nav">
 	      </li>
-	      <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Menu
-	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			<?php
-        		foreach($this->categorias as $c) {
-        		?>
-
-          <a class="item-categorias" href="categorias.php?categorias=<?=$c['tipo']?>"><?= $c['descripcion'] ?></a>				
-          <?php } ?>
-	        </div>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="listaempleados.php">Empleados</a>
-	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="listastock.php">Productos</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="listapedidos.php">Pedidos </a>
+	        <a class="nav-link" href="listapedidos.php">Despachar Pedidos</a>
 	      </li>
 	    </ul>
 	  </div>

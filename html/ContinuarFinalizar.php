@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mostrar Comidas</title>
+	<title>Mostrar Articulos</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<style type="text/css">
 		body {
@@ -28,19 +28,19 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-			<?php foreach($this->menu as $e) { ?>
+			<?php foreach($this->articulos as $art) { ?>
 		<tr>
-			<td><?= $e['nombre'] ?></a></td>
-			<td><?= $e['precio'] ?></td>
-			<td><?= $e['cantidad'] ?></td>
-			<td><?= $e['precio']*$e['cantidad'] ?></td>
+			<td><?= $art['nombre'] ?></a></td>
+			<td><?= $art['precio'] ?></td>
+			<td><?= $art['cantidad'] ?></td>
+			<td><?= $art['precio']*$art['cantidad'] ?></td>
 			<td><?php if($this->cantidad <= 1){ ?>
-				<a href="PedidoEliminado.php?borrar=<?=$e['id_menu']?>&ultimo=<?=$this->ultimo?>">Quitar</a>
+				<a href="PedidoEliminado.php?borrar=<?=$art['id_articulo']?>&ultimo=<?=$this->ultimo?>">Quitar</a>
 				<?php }else{ ?>
-				<a href="conFin.php?borrar=<?=$e['id_menu']?>&ultimo=<?=$this->ultimo?>">Quitar</a>
+				<a href="conFin.php?borrar=<?=$art['id_articulo']?>&ultimo=<?=$this->ultimo?>">Quitar</a>
 				<?php } ?>
  			</td>
-			<?php $total = $total + ($e['precio']*$e['cantidad'])	?>
+			<?php $total = $total + ($art['precio']*$art['cantidad'])	?>
 		</tr>
 			<?php  } ?>
 			<tr>

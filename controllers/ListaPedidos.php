@@ -10,7 +10,7 @@ require '../models/Pedidos.php';
 
 
 
-$e = new Detalle; //las tablas n a n no tienen esto,()modelos
+$e = new Detalle;
 $todos = $e->pedidos();
 $primerpedido = $e->primerpedido();
 

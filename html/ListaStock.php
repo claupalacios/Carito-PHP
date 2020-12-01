@@ -16,6 +16,8 @@
 		<tr>
 			<th></th><th></th>
 			<th>Nombre</th>
+			<th>Precio</th>
+			<th>Detalle</th>
 			<th>Stock</th>
 		</tr>
 		<?php
@@ -23,36 +25,18 @@
 		 ?>
 		 
 		<tr>
-			<td width="40"  align="center"><a href="modificarstock.php?id=<?=$art['id_articulo']?>"><img src="../html/imagenes/lapiz.png" width="22" height="22"></a></td>
-			<td width="40" align="center"><a href="borrarstock.php?id=<?=$art['id_articulo']?>"><img src="../html/imagenes/tacho.png" width="22" height="22"></a></td>
+			<td width="40"  align="center"><a href="ModificarArticulo.php?id=<?=$art['id_articulo']?>"><img src="../html/imagenes/lapiz.png" width="22" height="22"></a></td>
+			<td width="40" align="center"><a href="BorrarArticulo.php?id=<?=$art['id_articulo']?>"><img src="../html/imagenes/tacho.png" width="22" height="22"></a></td>
 			<td><?= $art['nombre'] ?></td>
+			<td><?= $art['precio'] ?></td>
+			<td><?= $art['detalle'] ?></td>
 			<td><?= $art['stock'] ?></td>
 		</tr>
 		<?php } ?>
 	</table>
-
-		<nav aria-label="Page navigation example">
-	 		<ul class="pagination justify-content-center">
-	    		<li class="page-item">
-	      			<a class="page-link" href="#" aria-label="Previous">
-	        			<span aria-hidden="true">&laquo;</span>
-	        			<span class="sr-only">Previous</span>
-	      			</a>
-	    		</li>
-			    <li class="page-item"><a class="page-link" href="#">1</a></li>
-			    <li class="page-item"><a class="page-link" href="#">2</a></li>
-			    <li class="page-item"><a class="page-link" href="#">3</a></li>
-			    <li class="page-item">
-	      			<a class="page-link" href="#" aria-label="Next">
-				        <span aria-hidden="true">&raquo;</span>
-				        <span class="sr-only">Next</span>
-	      			</a>
-	    		</li>
-	  		</ul>
-		</nav>
-
 	<div class="text-center">
-		<a href="PaginaPrincipalEncargado.php" class="btn btn-primary btn-lg active">Volver</a> <a href="crearstock.php" class="btn btn-primary btn-lg active">Agregar nuevo </a>
+		<a href="PaginaPrincipalEncargado.php" class="btn btn-secondary btn-lg active">Volver</a> 
+		<a href="CrearArticulo.php" class="btn btn-primary btn-lg active">Agregar nuevo </a>
 	</div>
 
 </body>

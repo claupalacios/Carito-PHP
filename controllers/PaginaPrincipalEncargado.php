@@ -3,7 +3,6 @@ require '../fw/fw.php';
 require '../views/PaginaPrincipalEncargado.php';
 require '../models/Categorias.php'; 
 require '../models/Empleados.php';
-require '../models/Stock.php';
 
 	//if(!isset($_SESSION['']))
 	$cat = new Categorias; 

@@ -11,10 +11,6 @@ require '../models/Articulos.php';
 
 	$art = new Articulos; 
 	$todos = $art->getTodos();
-
-//var_dump($todos);
-
-
-$v = new ListaStock();
-$v->articulos = $todos;
-$v->render();
+	$v = new ListaStock();
+	$v->articulos = $todos;
+	$v->render();

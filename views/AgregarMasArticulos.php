@@ -2,7 +2,7 @@
 
 class AgregarMasArticulos extends View {
 
-	public $categorias;
+	public $articulos;
 	public $ultimo;
 
 }

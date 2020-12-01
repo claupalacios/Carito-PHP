@@ -1,17 +1,17 @@
 <?php
 
-//controllers/ContunarAgregando.php
+//controllers/ContinarAgregando.php
 
 require '../fw/fw.php';
 require '../views/ContinuarAgregando.php';
-require '../models/Comidas.php'; 
+require '../models/Categorias.php'; 
 
 
-	$com = new Comidas; 
-	$todos = $com->getTodos();
+	$art = new Categorias; 
+	$todos = $art->getTodos();
 
 
 	$v = new ContinuarAgregando();
-	$v->menu = $todos;
+	$v->categorias = $todos;
 	$v->render();
 

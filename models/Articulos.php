@@ -14,39 +14,55 @@ class Articulos extends Model {
 
 	//POST
 
-	public function alta($nombre, $precio, $tipo){
+	public function alta($nombre, $tipo, $precio, $detalle, $stock){
+
+		if(!is_numeric($tipo)) die("Verifique que haya ingresado correctamente el tipo");
+		if($tipo<0) die("Verifique que haya ingresado correctamente el tipo");
+
 		if(strlen($nombre)<2) die("Verifique que haya ingresado correctamente el nombre");
 		$nombre=substr($nombre, 0, 50);
 		$nombre=$this->db->escapeString($nombre);
-		
-		
+
 		if(!is_numeric($precio)) die("Verifique que haya ingresado correctamente el precio");
 		if($precio<0) die("Verifique que haya ingresado correctamente el precio");
 
-		if(!ctype_digit($tipo)) die("Debe seleccionar tipo de articulo");
+		if(strlen($detalle)<2) die("Verifique que haya ingresado correctamente el detalle");
+		$detalle=substr($detalle, 0, 50);
+		$detalle=$this->db->escapeString($detalle);
+
+
+		if(!is_numeric($stock)) die("Verifique que haya ingresado correctamente el stock");
+		if($stock<0) die("Verifique que haya ingresado correctamente el stock");
+
 
 
 		$this->db->query("INSERT into articulos
-						(nombre, precio, tipo)
+						(tipo, nombre, precio, detalle, stock)
 						values 
-						('$nombre', $precio, $tipo)");
+						('$tipo', '$nombre', '$precio', '$detalle' , '$stock')");
 	}
 
 
 	//PUT
-	public function modificar($id, $nombre, $precio){
+	public function modificar($id, $nombre, $precio, $detalle, $stock){
 		if(!ctype_digit($id)) die("id no es un digito");
 
-		if(strlen($nombre)<2) die("Nombre no puede esatr vacio");
+		if(strlen($nombre)<2) die("Nombre no puede estar vacio");
 		$nombre=substr($nombre, 0, 20);
 		$nombre=$this->db->escapeString($nombre);
 
 		if(!is_numeric($precio)) die("Precio no es un numero");
 		if($precio<0) die("Precio no puede estar vacio");
 
+		if(strlen($detalle)<2) die("Detalle no puede estar vacio");
+		$detalle=substr($detalle, 0, 20);
+		$detalle=$this->db->escapeString($detalle);
+
+		if(!is_numeric($stock)) die("Stock no es un numero");
+
 		
 		$this->db->query("UPDATE articulos
-						SET nombre='$nombre', precio='$precio'
+						SET nombre='$nombre', precio='$precio', detalle='$detalle', stock='$stock'
 						WHERE id_articulo=$id");
 }
 

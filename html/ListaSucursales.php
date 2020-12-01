@@ -10,9 +10,13 @@
 	</style>
 </head>
 <body>
-	<?php foreach($this->sucursales as $s) {
-		 echo $s['nombre'];
-		  }
+	<?php foreach($this->sucursales as $s) { ?>
+		<div>
+			<p><?= $s['nombre'] ?></p>
+			<p><?= $s['direccion'] ?></p>
+			<p><?= $s['telefono'] ?></p>
+		</div>
+		 <?php }
  	?>
 	<div class="text-center">
 		<a href="PaginaPrincipal.php" class="btn btn-primary btn-lg active">Volver</a>

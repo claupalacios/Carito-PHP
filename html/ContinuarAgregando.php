@@ -15,7 +15,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Puli's Food</a>
+  <a class="navbar-brand" href="#">Libreria Sarasa</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,8 +27,8 @@
           Menu
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <?php foreach($this->menu as $e) { ?>	
-					<a class="dropdown-item" href="comidasAgregadas.php?comidas=<?=$e['tipo']?>"><?= $e['descripcion'] ?></a>				
+          <?php foreach($this->categorias as $cat) { ?>	
+					<a class="dropdown-item" href="ArticulosAgregados.php?articulos=<?=$cat['tipo']?>"><?= $cat['descripcion'] ?></a>				
 		  <?php } ?>
         </div>
     </ul>
@@ -40,25 +40,3 @@
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-
-<!--<!DOCTYPE html>
-<html>
-<head>
-	<title>Continuar Agregando</title>
-</head>
-<body>
-
-	<ul>
-		<li>Menu
-			<ul>
-				<?php foreach($this->menu as $e) { ?>
-				<li>
-					<a href="comidasAgregadas.php?comidas=<?=$e['tipo']?>"><?= $e['descripcion'] ?></a>
-				</li>
-				<?php } ?>
-			</ul>
-		</li>
-	</ul>
-
-</body>
-</html>-->
