@@ -1,24 +1,50 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Ingreso de Encargados</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
- </head>
- <body>
+  <link rel="stylesheet" href="../html/styles/reset.css">
+  <link rel="stylesheet" href="../html/styles/inicio.css">
+</head>
+  <body>
 
+  <header class="header-section">
+			<div class="header-navbar">
+				<div class="header-title">
+					<a class="title" href="PaginaPrincipal.php">Librería Sarasa</a>
+					<!-- <h1>Librería Sarasa</h1> -->
+					<img src="../html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
+				</div>
 
-  <form action="" method="POST">
-  <label>Ingrese mail:</label>
-  <input type="text" name="mail">
-</br>
-<label> Ingrese contraseña:</label>
-<input type="text" name="contrasena">
-</br>
-<a href="PaginaPrincipal.php" class="btn btn-secondary btn-lg active">Volver</a>
-<input class="btn btn-primary btn-lg active" type="submit" value="Aceptar" name="a">
-</form>
+				<div class="header-options">
+					<a class="nav-link" href="sucursales.php">Sucursales</a>
+					<a class="nav-link" href="iniciosesion.php">Ingreso para encargados</a>
+				</div>
+			</div>
+	</header>
 
-   </body>
+      <section class="login">
+        <form action="" method="POST">
+          <div class="mail">
+            <label>Ingrese mail:</label>
+            <input type="text" name="mail" >
+          </div>
+          
+          <div class="pass">
+            <label> Ingrese contraseña:</label>
+            <input type="text" name="contrasena" >
+          </div>
+
+          <div class="buttons-wrapper">
+            <div class="volver">
+              <a href="PaginaPrincipal.php">Volver</a>
+            </div>
+            
+            <input class="volver" type="submit" value="Aceptar" name="a">
+          </div>
+
+        </form>
+      </section>
+
+  </body>
 </html>
 

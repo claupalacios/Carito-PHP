@@ -2,29 +2,47 @@
 <html>
 <head>
 	<title>Lista de Sucursales</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<style type="text/css">
-		body {
-			margin: 50px;
-		}
-	</style>
+	<link rel="stylesheet" href="../html/styles/reset.css">
+	<link rel="stylesheet" href="../html/styles/listaSucursales.css">
 </head>
 <body>
-	<?php foreach($this->sucursales as $s) { ?>
-		<div>
-			<p><?= $s['nombre'] ?></p>
-			<p><?= $s['direccion'] ?></p>
-			<p><?= $s['telefono'] ?></p>
+
+	<header class="header-section">
+			<div class="header-navbar">
+				<div class="header-title">
+					<a class="title" href="PaginaPrincipal.php">Librería Sarasa</a>
+					<!-- <h1>Librería Sarasa</h1> -->
+					<img src="../html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
+				</div>
+
+				<div class="header-options">
+					<a class="nav-link" href="sucursales.php">Sucursales</a>
+					<a class="nav-link" href="iniciosesion.php">Ingreso para encargados</a>
+				</div>
+			</div>
+	</header>
+
+	<div class="content-wrapper">
+		<section class="sucursales-wrapper">
+			<?php foreach($this->sucursales as $s) { ?>
+				<div class="sucursales">
+					<img src="<?= $s['imagen'] ?>" alt="">
+					<p><?= $s['nombre'] ?></p>
+					<p><?= $s['direccion'] ?></p>
+					<p><?= $s['telefono'] ?></p>
+				</div>
+				<?php }
+			?>
+		</section>
+
+
+		<div class="volver">
+			<a href="PaginaPrincipal.php">Volver</a>
 		</div>
-		 <?php }
- 	?>
-	<div class="text-center">
-		<a href="PaginaPrincipal.php" class="btn btn-primary btn-lg active">Volver</a>
 	</div>
 
 
-	<script src="js/jquery-3.3.1.slim.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+
+
 </body>
 </html>

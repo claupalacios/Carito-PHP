@@ -1,15 +1,13 @@
 <?php
-
 //html/PaginaPrincipal.php
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Librería Sarasa</title>
+  <title>Librería Sarasa</title>
   <link rel="stylesheet" href="../html/styles/reset.css">
-	<link rel="stylesheet" href="../html/styles/paginaPrincipal.css">
+  <link rel="stylesheet" href="../html/styles/paginaPrincipal.css">
 
 </head>
 <body>
@@ -34,25 +32,16 @@
         foreach($this->categorias as $c) {
         ?>
 
-          <a class="item-categorias" href="categorias.php?categorias=<?=$c['tipo']?>"><?= $c['descripcion'] ?></a>				
+          <a class="item-categorias" href="categorias.php?categorias=<?=$c['tipo']?>"><?= $c['descripcion'] ?></a>
+          <p class="barra">|</p>
           <?php } ?>
 
       </div>
-
-
+  </div>
+  <div class="background-pic">
+    <img class="pic" src="../html/Imagenes/fondo.jpg" alt="">
   </div>
     
-
-
-
-    
-
-
-  
-
-    
-
-
 
 </body>
 </html>

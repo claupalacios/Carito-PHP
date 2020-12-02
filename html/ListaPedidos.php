@@ -11,9 +11,22 @@
 		border-bottom: 3px solid black !important;
 	}
 </style>
+
+<script type="text/javascript">
+	function despacharPedido(idPedido) {
+		var id = idPedido;
+		if ( $('#'+id).attr('name') == 'idDespachado[]' ) {
+		    $('#'+id).attr('name','');
+		} else {
+		    $('#'+id).attr('name','idDespachado[]');
+		}
+
+		
+	}
+</script>
 </head>
 <body>
-
+<form method="POST">
 	<table class="table">
 		<thead class="thead-light">
 			<tr>
@@ -33,7 +46,6 @@
 		?>
 		<tr>
 			<td class="borders" colspan='4'>
-				<input type="hidden" value="<?=$despachadoFlag?>">
 				<td class="borders">
 					<b>Total</b>
 				</td>
@@ -46,7 +58,8 @@
 						<input type="checkbox" class="pedidoDespachado" checked disabled>
 					<?php   }
 					else { ?>
-						<input type="checkbox" class="pedidoDespachado" >
+						<input type="checkbox" name= "" id = "" onclick = "despacharPedido(<?=$p['id_pedido'] -1?>)" class="pedidoDespachado" >
+						<input type="hidden" name = "" id="<?=$p['id_pedido'] -1?>" value="<?=$p['id_pedido'] -1?>" />
 					<?php } ?>
 				</td>
 				<td class="borders">
@@ -91,7 +104,8 @@
 						<input type="checkbox" class="pedidoDespachado" checked disabled>
 					<?php   }
 					else { ?>
-						<input type="checkbox" class="pedidoDespachado">
+						<input type="checkbox" name= "" id = "" onclick = "despacharPedido(<?=$p['id_pedido']?>)" class="pedidoDespachado" >
+						<input type="hidden" name = "" id="<?=$p['id_pedido']?>" value="<?=$p['id_pedido']?>" />
 					<?php } ?>
 				</td>
 				<td class="borders">
@@ -104,9 +118,11 @@
 
 		<br>
 		<div class="text-center">
-			<a href="paginaprincipalencargado.php" class="btn btn-primary btn-lg active">Volver</a>
+			<a href="PaginaPrincipalEncargado.php" class="btn btn-secondary btn-lg ">Volver</a>
+			<input type=submit class="btn btn-primary btn-lg active" value="Despachar Pedidos">
 		</div>
-
+	</div>
+	</form>
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>

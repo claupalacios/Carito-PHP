@@ -66,6 +66,24 @@ class Articulos extends Model {
 						WHERE id_articulo=$id");
 }
 
+	//PUT
+	public function modificarStock($id, $stock){
+		if(!ctype_digit($id)) die("id no es un digito");
+
+		if(!is_numeric($stock)) die("Stock no es un numero");
+		if($stock<0) die("Stock no puede estar vacio");
+	
+		$this->db->query("SELECT stock from articulos WHERE id_articulo = '$id'");
+		$aux = $this->db->fetch();
+		$stockTotal = $aux['stock'];
+
+		$stockFinal =  $stockTotal - $stock;
+
+		$this->db->query("UPDATE articulos
+						SET stock='$stockFinal'
+						WHERE id_articulo=$id");
+}
+
 
 	//DELETE
 	public function borrar($id){

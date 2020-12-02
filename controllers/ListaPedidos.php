@@ -5,6 +5,7 @@
 require '../fw/fw.php';
 require '../views/ListaPedidos.php';
 require '../models/Detalle.php'; 
+require '../models/Articulos.php'; 
 require '../models/Pedidos.php'; 
 
 
@@ -21,6 +22,14 @@ if(isset($_GET['borrar'])){
 	$e->borrarpedido($_GET['borrar']);
 	$p->borrarpedido($_GET['borrar']);
 	header('Location: ListaPedidos.php');
+	exit;
+}
+
+if(isset($_POST['idDespachado'])){
+	foreach ($_POST['idDespachado'] as $idDespachado) {
+		(new Pedidos)->despacharPedido($idDespachado);
+	}
+	header("Location: ListaPedidos.php");
 	exit;
 }
 

@@ -1,7 +1,5 @@
 <?php
 
-//controllers/inicio.php
-
 require '../fw/fw.php';
 require '../models/Empleados.php';
 require '../views/inicio.php';

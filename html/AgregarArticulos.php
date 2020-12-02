@@ -13,7 +13,6 @@
 <body>
 
 	<div class="card" style="width: 18rem;">
-	  <!--<img class="card-img-top" src="" alt="Imagen de Base de Datos">-->
 	  <div class="card-body">
 	  	<?php foreach($this->articulos as $a) { 
 		if(($a['id_articulo']) == $_GET['id']){ ?>
@@ -21,8 +20,6 @@
 			<h5 class="card-title"><?= $a['nombre']." $". $a['precio']?></h5>
 		<?php }
 		} ?>
-	    <!-- <p class="card-text">Descripcion del articulo q debe
-	    agregarse a la base de datos.</p> -->
 	    <form method="GET">
 		<label>Cantidad: </label>
 			<select name="cantidad">

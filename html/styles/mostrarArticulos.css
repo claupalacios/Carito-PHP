@@ -5,6 +5,11 @@
 
 body {
   font-family: "Lato", sans-serif;
+  margin: 0 50px;
+}
+body a {
+  color: #313131;
+  text-decoration: none;
 }
 
 /* ------------------------- Header ------------------------- */
@@ -22,9 +27,6 @@ body {
   justify-content: space-around;
   font-size: 40px;
   font-weight: 800;
-}
-.header-section .header-navbar .header-title h1 {
-  margin: 45px 0 0 150px;
 }
 .header-section .header-navbar .header-title .title {
   margin: 45px 0 0 150px;
@@ -50,35 +52,38 @@ body {
   font-weight: 700;
   margin: 0 30px 0 0;
 }
+.header-section .header-navbar .header-options a:hover {
+  color: #CE3229;
+}
 
-/* ------------------------- Header ------------------------- */
-.navbar .categorias {
+/* ------------------------- Table ------------------------- */
+.table .imagen-prod {
+  width: 50px;
+  height: 50px;
+}
+
+.text-center {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  height: 110px;
-  background-color: #CE3229;
-  padding: 40px 0;
+  width: 100px;
+  margin: 0 48%;
+  border: 2px solid black;
+  padding: 10px;
 }
-.navbar .categorias a {
+.text-center a {
+  color: #313131;
   text-decoration: none;
-  color: white;
-  margin: 0 20px;
-  font-size: 2.3rem;
-  font-weight: 600;
-}
-.navbar .categorias .barra {
-  color: white;
-  font-size: 1.5rem;
-}
-.navbar .categorias .botones {
-  display: flex;
 }
 
-.background-pic {
-  background-size: cover;
-  overflow: hidden;
-  height: 680px;
+.text-center:hover {
+  background-color: #CE3229;
+  padding: 10px 20px;
+}
+.text-center:hover a {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
 }
 
-/*# sourceMappingURL=paginaPrincipal.css.map */
+/*# sourceMappingURL=mostrarArticulos.css.map */
