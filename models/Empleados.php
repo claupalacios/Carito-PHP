@@ -4,7 +4,7 @@ class Empleados extends Model {
 
 
 
-	//GET ALL
+	//GET
 	public function getTodos(){
 		$this->db->query("select * from empleados");
 		return $this->db->fetchAll();

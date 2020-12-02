@@ -1,5 +1,4 @@
 <?php
-// MODELS/Detalle.php
 class Detalle extends Model {
 	
 

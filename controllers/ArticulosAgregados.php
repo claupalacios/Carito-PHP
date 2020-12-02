@@ -13,5 +13,3 @@ require '../models/Articulos.php';
 	$v = new MostrarArticulosAgregados();
 	$v->articulos = $todos;
 	$v->render();
-
-

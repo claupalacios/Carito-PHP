@@ -1,5 +1,4 @@
 <?php
-// MODELS/Pedidos.php
 class Pedidos extends Model {
 	
 

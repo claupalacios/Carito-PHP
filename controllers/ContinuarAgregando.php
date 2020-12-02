@@ -1,7 +1,5 @@
 <?php
 
-//controllers/ContinarAgregando.php
-
 require '../fw/fw.php';
 require '../views/ContinuarAgregando.php';
 require '../models/Categorias.php'; 

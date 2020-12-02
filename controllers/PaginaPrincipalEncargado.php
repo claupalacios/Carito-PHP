@@ -17,6 +17,5 @@ require '../models/Empleados.php';
 
 
 	$v = new PaginaPrincipalEncargado();
-	$v->categorias = $todos;
 	$v->render();
 

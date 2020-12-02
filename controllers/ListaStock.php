@@ -1,7 +1,5 @@
 <?php
 
-//controllers/verempleados.php
-
 require '../fw/fw.php';
 require '../views/ListaStock.php';
 require '../models/Articulos.php';

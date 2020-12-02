@@ -5,7 +5,6 @@ class Articulos extends Model {
 
 
 	//GET All
-
 	public function getTodos(){
 		$this->db->query("select * from articulos");
 		return $this->db->fetchAll();
@@ -13,7 +12,6 @@ class Articulos extends Model {
 
 
 	//POST
-
 	public function alta($nombre, $tipo, $precio, $detalle, $stock){
 
 		if(!is_numeric($tipo)) die("Verifique que haya ingresado correctamente el tipo");

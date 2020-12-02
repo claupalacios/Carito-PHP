@@ -1,7 +1,5 @@
 <?php
 
-//fw/Model.php
-
 abstract class Model {	
 	protected $db;
 

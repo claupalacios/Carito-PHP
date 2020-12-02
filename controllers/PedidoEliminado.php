@@ -1,7 +1,5 @@
 <?php
 
-//controllers/ConFin.php
-
 require '../fw/fw.php';
 require '../views/PedidoEliminado.php';
 require '../models/Detalle.php';

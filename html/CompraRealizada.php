@@ -1,7 +1,3 @@
-
-
-<!-- /html/CompraRealizada.php  -->
-
 <!DOCTYPE html>
 <html>
 <head>

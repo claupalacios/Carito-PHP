@@ -1,7 +1,5 @@
 <?php
 
-//controllers/listaPedidos.php
-
 require '../fw/fw.php';
 require '../views/ListaPedidos.php';
 require '../models/Detalle.php'; 

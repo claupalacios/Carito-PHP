@@ -1,6 +1,4 @@
-<?php 
-
-//view/inicio.php
+<?php
 
 class Inicio extends View {
 	
