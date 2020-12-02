@@ -4,7 +4,14 @@ require '../views/PaginaPrincipalEncargado.php';
 require '../models/Categorias.php'; 
 require '../models/Empleados.php';
 
-	//if(!isset($_SESSION['']))
+
+	session_start();
+
+	if(!isset($_SESSION['logueado'])){
+		header("Location:PaginaPrincipal.php");
+		exit;
+	}
+
 	$cat = new Categorias; 
 	$todos = $cat->getTodos();
 

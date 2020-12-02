@@ -79,6 +79,8 @@ class Articulos extends Model {
 
 		$stockFinal =  $stockTotal - $stock;
 
+		if($stockFinal < 0 )die("No hay stock de producto");
+
 		$this->db->query("UPDATE articulos
 						SET stock='$stockFinal'
 						WHERE id_articulo=$id");

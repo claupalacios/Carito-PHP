@@ -11,7 +11,6 @@
 			<div class="header-navbar">
 				<div class="header-title">
 					<a class="title" href="PaginaPrincipal.php">Librería Sarasa</a>
-					<!-- <h1>Librería Sarasa</h1> -->
 					<img src="../html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
 				</div>
 
@@ -31,7 +30,7 @@
           
           <div class="pass">
             <label> Ingrese contraseña:</label>
-            <input type="text" name="contrasena" >
+            <input type="password" name="contrasena" >
           </div>
 
           <div class="buttons-wrapper">

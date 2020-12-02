@@ -27,6 +27,9 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="listapedidos.php">Despachar Pedidos</a>
 	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="Logout.php">Cerrar Sesión</a>
+	      </li>
 	    </ul>
 	  </div>
 	</nav>

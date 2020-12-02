@@ -40,9 +40,11 @@
 				<th>Eliminar</th>
 			</tr>
 		</thead>
-		<?php $contador = $this->primer; $total = 0 ?>
-		<?php foreach ($this->pedidos as $p) { ?>
-		<?php if ($contador!=$p['id_pedido']) {
+		<?php
+		$contador = $this->primer; 
+		$total = 0;
+		foreach ($this->pedidos as $p) { 
+			if ($contador!=$p['id_pedido']) {
 		?>
 		<tr>
 			<td class="borders" colspan='4'>
@@ -88,8 +90,9 @@
 				$despachadoFlag = false;		
 			?>
 		</tr>
-		<?php $contador=$p['id_pedido']; } ?>
-		<?php if($this->cantidad >= 1){ ?>
+		<?php 
+		$contador=$p['id_pedido']; } 
+		if($this->cantidad >= 1){ ?>
 		<tr>
 			<td class="borders" colspan='4'>
 				<td class="borders">

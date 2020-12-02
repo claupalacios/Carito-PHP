@@ -8,7 +8,12 @@ require '../models/Detalle.php';
 require '../models/Articulos.php'; 
 require '../models/Pedidos.php'; 
 
+	session_start();
 
+	if(!isset($_SESSION['logueado'])){
+		header("Location:PaginaPrincipal.php");
+		exit;
+	}
 
 
 $e = new Detalle;
@@ -27,6 +32,12 @@ if(isset($_GET['borrar'])){
 
 if(isset($_POST['idDespachado'])){
 	foreach ($_POST['idDespachado'] as $idDespachado) {
+		$pedidosADespachar = (new Detalle)->buscarDp($idDespachado);
+		foreach ($pedidosADespachar as $pedido) {
+			$articuloADespachar = $pedido["id_articulo"];
+			$cantidadADespachar = $pedido["cantidad"];
+			(new Articulos)->modificarStock($articuloADespachar,$cantidadADespachar);
+		}
 		(new Pedidos)->despacharPedido($idDespachado);
 	}
 	header("Location: ListaPedidos.php");
