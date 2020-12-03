@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Agregar Articulos</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="html/css/bootstrap.min.css">
 	<style type="text/css">
 		body {
 			margin: 50px;
@@ -20,7 +20,7 @@
 			<h5 class="card-title"><?= $art['nombre']." $". $art['precio']?></h5>
 		<?php }
 		} ?>
-	    <form method="GET">
+	    <form method="POST">
 		<label>Cantidad: </label>
 			<select name="cantidad">
 				<option value="1">1</option>
@@ -34,7 +34,7 @@
 			<input type="hidden" name="id_articulo" value="<?= $_GET['id'] ?>">
 			<input type="hidden" name="id_pedido" value="<?= $this->ultimo ?>">
 			<input type="submit" value="Agregar" class="btn btn-primary">
-			<a href="ArticulosAgregados.php?articulos=<?=$_GET['categorias']?>" class="btn btn-primary">Volver</a>
+			<a href="ArticulosAgregados-Articulos-<?=$_GET['categorias']?>" class="btn btn-primary">Volver</a>
 		</form>
 	  </div>
 	</div>

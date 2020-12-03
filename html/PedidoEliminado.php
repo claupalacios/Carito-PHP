@@ -7,7 +7,7 @@
 
 	<h1>Su pedido ha sido eliminado<h1>
 	<br>
-	<a href="PaginaPrincipal.php">Volver</a>
+	<a href="PaginaPrincipal">Volver</a>
 
 </body>
 </html>

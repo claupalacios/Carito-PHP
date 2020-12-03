@@ -9,7 +9,7 @@ require '../models/Pedidos.php';
 	session_start();
 
 	if(!isset($_SESSION['logueado'])){
-		header("Location:PaginaPrincipal.php");
+		header("Location:PaginaPrincipal");
 		exit;
 	}
 
@@ -24,7 +24,7 @@ $cantidadPedidos = $p->cantidad();
 if(isset($_GET['borrar'])){
 	$e->borrarpedido($_GET['borrar']);
 	$p->borrarpedido($_GET['borrar']);
-	header('Location: ListaPedidos.php');
+	header('Location: ListaPedidos');
 	exit;
 }
 
@@ -38,7 +38,7 @@ if(isset($_POST['idDespachado'])){
 		}
 		(new Pedidos)->despacharPedido($idDespachado);
 	}
-	header("Location: ListaPedidos.php");
+	header("Location: ListaPedidos");
 	exit;
 }
 

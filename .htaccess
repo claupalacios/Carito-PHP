@@ -1,0 +1,44 @@
+RewriteEngine on
+
+RewriteRule ^Agregar$ controllers/Agregar.php
+RewriteRule ^AgregarMas$ controllers/AgregarMas.php
+
+RewriteRule ^AgregarMas$ controllers/AgregarMas.php
+
+RewriteRule ^Agregar-([0-9]+)-([0-9]+)$ controllers/Agregar.php?id=$1&categorias=$2
+RewriteRule ^AgregarMas-([0-9]+)-([0-9]+)$ controllers/AgregarMas.php?id=$1&categorias=$2
+
+RewriteRule ^ArticulosAgregados-Articulos-([0-9]+)$ controllers/ArticulosAgregados.php?articulos=$1
+
+
+RewriteRule ^BorrarArticulo-([0-9]+)$ controllers/BorrarArticulo.php?id_articulo=$1
+RewriteRule ^ModificarArticulo-([0-9]+)$ controllers/ModificarArticulo.php?id_articulo=$1
+
+RewriteRule ^Categorias-([0-9]+)$ controllers/Categorias.php?categorias=$1
+RewriteRule ^Agregar-([0-9]+)-([0-9]+)$ controllers/Agregar.php?id=$1&categorias=$2
+
+RewriteRule ^CompraRealizada$ controllers/CompraRealizada.php
+
+RewriteRule ^ConFin$ controllers/ConFin.php
+RewriteRule ^ConFin-([0-9]+)-([0-9]+)$ controllers/ConFin.php?borrar=$1&ultimo=$2
+
+
+RewriteRule ^ContinuarAgregando$ controllers/ContinuarAgregando.php
+
+RewriteRule ^CrearArticulo$ controllers/CrearArticulo.php
+
+RewriteRule ^IngresarPedido$ controllers/IngresarPedido.php
+RewriteRule ^PedidoEliminado-([0-9]+)-([0-9]+)$ controllers/PedidoEliminado.php?borrar=$1&ultimo=$2
+
+RewriteRule ^InicioSesion$ controllers/iniciosesion.php
+
+RewriteRule ^ListaPedidos$ controllers/ListaPedidos.php
+RewriteRule ^BorrarPedido-([0-9]+)$ controllers/ListaPedidos.php?borrar=$1
+
+RewriteRule ^ListaStock$ controllers/ListaStock.php
+RewriteRule ^Logout$ controllers/Logout.php
+RewriteRule ^ModificarArticulo$ controllers/ModificarArticulo.php
+RewriteRule ^PaginaPrincipal$ controllers/PaginaPrincipal.php
+RewriteRule ^PaginaPrincipalEncargado$ controllers/PaginaPrincipalEncargado.php
+RewriteRule ^PedidoEliminado$ controllers/PedidoEliminado.php
+RewriteRule ^Sucursales$ controllers/Sucursales.php

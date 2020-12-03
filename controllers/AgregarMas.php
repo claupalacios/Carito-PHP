@@ -5,23 +5,22 @@ require '../views/AgregarMasArticulos.php';
 require '../models/Articulos.php'; 
 require '../models/Detalle.php'; 
 
-if(isset($_GET['cantidad'])){
-	if(!isset($_GET['cantidad'])) die("error1");
-	if(!isset($_GET['id_pedido'])) die("error2");
-	if(!isset($_GET['id_articulo'])) die("error3");
+if(isset($_POST['cantidad'])){
+	if(!isset($_POST['id_pedido'])) die("error1");
+	if(!isset($_POST['id_articulo'])) die("error2");
 	
 	$d = new Detalle;
-	if($d->buscarNr($_GET['id_pedido'],$_GET['id_articulo'])>= 1){
-		$all = $d->buscarFa($_GET['id_pedido'],$_GET['id_articulo']);
+	if($d->buscarNr($_POST['id_pedido'],$_POST['id_articulo'])>= 1){
+		$all = $d->buscarFa($_POST['id_pedido'],$_POST['id_articulo']);
 		foreach($all as $e){
 			$sumar = $e['cantidad'];
 		}
-		$d->modificar($_GET['id_pedido'],$_GET['id_articulo'],$_GET['cantidad']+$sumar);
-		header("Location: ConFin.php");
+		$d->modificar($_POST['id_pedido'],$_POST['id_articulo'],$_POST['cantidad']+$sumar);
+		header("Location: ConFin");
 		exit;
 	}else{
-		$d->alta($_GET['id_pedido'],$_GET['id_articulo'],$_GET['cantidad']);
-		header("Location: ConFin.php");
+		$d->alta($_POST['id_pedido'],$_POST['id_articulo'],$_POST['cantidad']);
+		header("Location: ConFin");
 		exit;
 	}
 

@@ -5,12 +5,13 @@ require '../views/IngresarPedido.php';
 require '../models/Pedidos.php';
 require '../models/Detalle.php';
 
-if (isset($_GET['direccion'])) {
-	if(!isset($_GET['direccion'])) die("error1");
+if (isset($_POST['direccion'])) {
+	if(!isset($_POST['direccion'])) die("error1");
 	$dia = getdate();
 	$formato = $dia["year"] ."-". $dia["mon"] ."-". $dia["mday"];
-	(new Pedidos)->alta((new Detalle)->ultimo(),$formato,$_GET['direccion']);
-	header("Location: CompraRealizada.php");
+	(new Pedidos)->alta((new Detalle)->ultimo(),$formato,$_POST['direccion']);
+	header("Location: CompraRealizada");
+	exit;
 }
 
 	$v = new IngresarPedido();

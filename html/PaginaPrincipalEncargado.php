@@ -2,39 +2,32 @@
 <html>
 <head>
 	<title>Pagina Principal Encargado</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  	<style type="text/css">
-	    body {
-	      margin: 50px;
-	    }
-  	</style>
+	<link rel="stylesheet" href="html/styles/reset.css">
+	<link rel="stylesheet" href="html/styles/paginaPrincipalEncargado.css">
+
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="#">Librería Sarasa</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-	    <ul class="navbar-nav">
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="listastock.php">Productos</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="listapedidos.php">Despachar Pedidos</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="Logout.php">Cerrar Sesión</a>
-	      </li>
-	    </ul>
-	  </div>
-	</nav>
+	<header class="header-section">
+			<div class="header-navbar">
+				<div class="header-title">
+					<a class="title" href="PaginaPrincipalEncargado">Librería Sarasa</a>
+					<img src="html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
+				</div>
 
-<script src="js/jquery-3.3.1.slim.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+				<div class="header-options">
+					<a class="nav-link" href="ListaStock">Productos</a>
+					<a class="nav-link" href="ListaPedidos">Despachar Pedidos</a>
+					<a class="nav-link" href="Logout">Cerrar Sesión</a>
+				</div>
+			</div>
+	</header>
+
+
+  <div class="background-pic">
+    <img class="pic" src="html/Imagenes/fondo.jpg" alt="">
+  </div>
+
 </body>
 </html>
  

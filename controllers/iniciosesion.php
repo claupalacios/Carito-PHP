@@ -3,7 +3,6 @@
 require '../fw/fw.php';
 require '../models/Empleados.php';
 require '../views/inicio.php';
-require '../views/paginaprincipal.php';
 
 
 session_start();
@@ -17,7 +16,7 @@ $p->entrar($_POST['mail'],$_POST['contrasena']);
 	
 $_SESSION['logueado'] = true;
 
-header('Location: paginaprincipalencargado.php');
+header('Location: PaginaPrincipalEncargado');
 exit;
 
 }else{

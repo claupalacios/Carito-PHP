@@ -3,42 +3,76 @@
 <html>
 <head>
 	<title>Alta de Articulo</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="html/styles/reset.css">
+	<link rel="stylesheet" href="html/styles/altaArticulo.css">
 </head>
 <body>
 
-	<h1>Alta Articulo</h1>
-	<form action="" method="POST">
-		<label>Nombre:</label>
-		<input type="text" name="nombre" id="n"/>
-		<br><br>
-		<label>Tipo:</label>
-		<div>
-		<select name="tipo" id="t">
+	<header class="header-section">
+			<div class="header-navbar">
+				<div class="header-title">
+					<a class="title" href="PaginaPrincipalEncargado">Librería Sarasa</a>
+					<img src="html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
+				</div>
 
-        <?php
-        foreach($this->tipo as $c) {
-        ?> 
-      	<option value="<?php echo $c['tipo'] ?>"><?php echo $c['descripcion'] ?></option>
-        <?php } ?></select> 
+				<div class="header-options">
+					<a class="nav-link" href="ListaStock">Productos</a>
+					<a class="nav-link" href="ListaPedidos">Despachar Pedidos</a>
+					<a class="nav-link" href="Logout">Cerrar Sesión</a>
+				</div>
+			</div>
+	</header>
 
-      	</div>
-		<label>Precio:</label>
-		<input type="number" name="precio" id="p"/>
-		<br><br>
-		<label>Detalle:</label>
-		<input type="text" name="detalle" id="d"/>
-		<br><br>
-		<label>Cantidad:</label>
-		<input type="number" name="stock" id="c"/>
-		<br><br>
+	<section class="alta">
 		
-		<div>
-			<a href="listastock.php" class="btn btn-secondary">Volver</a>
-			<input type=submit class="btn btn-primary" value="Continuar">
+		<form action="" method="POST">
+		<h1>Alta Articulo</h1>
+			<div>
+				<label>Nombre:</label>
+				<input type="text" name="nombre" id="n"/>
+			</div>
+
+			<div>
+				<label>Tipo:</label>
+				<select name="tipo" id="t">
+
+					<?php
+					foreach($this->tipo as $c) {
+					?> 
+					<option value="<?php echo $c['tipo'] ?>"><?php echo $c['descripcion'] ?></option>
+					<?php } ?>
+				</select> 
+
+			</div>
+
+			<div class="wrapper">
+				<label>Precio:</label>
+				<input type="number" min="1" name="precio" id="p"/>
+			</div>
+
+
+			<div class="wrapper">
+				<label>Detalle:</label>
+				<input type="text" name="detalle" id="d"/>
+			</div>
+
+
+			<div class="wrapper">
+				<label>Cantidad:</label>
+				<input type="number" min="0" name="stock" id="c"/>
+			</div>
+
+			<div class="buttons-wrapper">
+				<div class="volver">
+					<a href="ListaStock">Volver</a>
+				</div>
+            <input type=submit class="volver" value="Continuar">
+			</div>
+			
 		</div>
-	</div>
-	</form>
+		</form>
+	</section>
+	
 
 
 </body>

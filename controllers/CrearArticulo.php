@@ -7,7 +7,12 @@ require '../models/Categorias.php';
 require '../views/FormAltaArticulo.php';
 
 
+	session_start();
 
+	if(!isset($_SESSION['logueado'])){
+		header("Location:PaginaPrincipal");
+		exit;
+	}
 
 if(isset($_POST['nombre'])){
 	if(!isset($_POST['nombre'])) die("error1");
@@ -17,7 +22,7 @@ if(isset($_POST['nombre'])){
 	if(!isset($_POST['stock'])) die("error5");
 
 	(new Articulos)->alta($_POST['nombre'],$_POST['tipo'],$_POST['precio'],$_POST['detalle'],$_POST['stock']);
-	header("Location: listastock.php");
+	header("Location: ListaStock");
 	exit;
 	
 

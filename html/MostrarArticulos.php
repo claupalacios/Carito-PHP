@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Mostrar Articulos</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="../html/styles/mostrarArticulos.css">
+	<link rel="stylesheet" type="text/css" href="html/css/bootstrap.min.css">
+	<link rel="stylesheet" href="html/styles/mostrarArticulos.css">
 
 </head>
 <body>
@@ -11,14 +11,13 @@
 	<header class="header-section">
 			<div class="header-navbar">
 				<div class="header-title">
-					<a class="title" href="PaginaPrincipal.php">Librería Sarasa</a>
-					<!-- <h1>Librería Sarasa</h1> -->
-					<img src="../html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
+					<a class="title" href="PaginaPrincipal">Librería Sarasa</a>
+					<img src="html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
 				</div>
 
 				<div class="header-options">
-					<a class="nav-link" href="sucursales.php">Sucursales</a>
-					<a class="nav-link" href="iniciosesion.php">Ingreso para encargados</a>
+					<a class="nav-link" href="Sucursales">Sucursales</a>
+					<a class="nav-link" href="InicioSesion">Ingreso para encargados</a>
 				</div>
 			</div>
 	</header>
@@ -44,7 +43,7 @@
 						<img src="<?= $a['imagen'] ?>" alt="" class="imagen-prod">
 					</td>
 					<td>
-						<a href="agregar.php?id=<?=$a['id_articulo']?>&categorias=<?=$_GET['categorias']?>"><?= $a['nombre'] ?></a>
+						<a href="Agregar-<?=$a['id_articulo']?>-<?=$_GET['categorias']?>"><?= $a['nombre'] ?></a>
 					</td>
 					<td>
 						<?= $a['detalle'] ?>
@@ -59,12 +58,12 @@
 		</table>
 		
 	<div class="text-center">
-		<a href="PaginaPrincipal.php">Volver</a>
+		<a href="PaginaPrincipal">Volver</a>
 	</div>
 	
 
-	<script src="js/jquery-3.3.1.slim.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="html/js/jquery-3.3.1.slim.min.js"></script>
+	<script src="html/js/popper.min.js"></script>
+	<script src="html/js/bootstrap.min.js"></script>
 </body>
 </html>

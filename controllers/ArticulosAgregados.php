@@ -6,7 +6,7 @@ require '../views/MostrarArticulosAgregados.php';
 require '../models/Articulos.php'; 
 
 
-	$art = new Articulos; 
+	$art = new Articulos;
 	$todos = $art->getTodos();
 
 

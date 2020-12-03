@@ -6,8 +6,8 @@
 <html>
 <head>
   <title>Librería Sarasa</title>
-  <link rel="stylesheet" href="../html/styles/reset.css">
-  <link rel="stylesheet" href="../html/styles/paginaPrincipal.css">
+  <link rel="stylesheet" href="html/styles/reset.css">
+  <link rel="stylesheet" href="html/styles/paginaPrincipal.css">
 
 </head>
 <body>
@@ -16,12 +16,12 @@
         <div class="header-navbar">
             <div class="header-title">
                 <h1>Librería Sarasa</h1>
-                <img src="../html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
+                <img src="html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
             </div>
 
             <div class="header-options">
-                <a class="nav-link" href="sucursales.php">Sucursales</a>
-                <a class="nav-link" href="iniciosesion.php">Ingreso para encargados</a>
+                <a class="nav-link" href="Sucursales">Sucursales</a>
+                <a class="nav-link" href="InicioSesion">Ingreso para encargados</a>
             </div>
         </div>
   </header>
@@ -32,14 +32,14 @@
         foreach($this->categorias as $c) {
         ?>
 
-          <a class="item-categorias" href="categorias.php?categorias=<?=$c['tipo']?>"><?= $c['descripcion'] ?></a>
+          <a class="item-categorias" href="Categorias-<?=$c['tipo']?>"><?= $c['descripcion'] ?></a>
           <p class="barra">|</p>
           <?php } ?>
 
       </div>
   </div>
   <div class="background-pic">
-    <img class="pic" src="../html/Imagenes/fondo.jpg" alt="">
+    <img class="pic" src="html/Imagenes/fondo.jpg" alt="">
   </div>
     
 

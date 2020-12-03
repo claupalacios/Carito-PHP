@@ -8,7 +8,7 @@ require '../models/Empleados.php';
 	session_start();
 
 	if(!isset($_SESSION['logueado'])){
-		header("Location:PaginaPrincipal.php");
+		header("Location:PaginaPrincipal");
 		exit;
 	}
 

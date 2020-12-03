@@ -16,7 +16,7 @@ if(isset($_GET['borrar'])){
 	if(!isset($_GET['ultimo'])) die("error2");
 
 	$p->quitar($_GET['ultimo'],$_GET['borrar']);
-	header('Location: conFin.php');
+	header('Location: ConFin');
 	exit;
 }
 

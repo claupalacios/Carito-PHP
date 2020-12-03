@@ -2,29 +2,40 @@
 <html>
 <head>
 	<title>Ingresar Pedido</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<style type="text/css">
-		body {
-			margin: 50px;
-		}
-	</style>
+	<link rel="stylesheet" href="html/styles/reset.css">
+	<link rel="stylesheet" href="html/styles/altaArticulo.css">
 </head>
 <body>
 
-	<form>
-  <div class="form-group">
-    <label for="direccion">Direccion</label>
-    <br>
-    <input type="text" id="direccion" name="direccion" placeholder="Ingresar Direccion">
-    <div id="alerta" class="alerta">Ingrese la direccion de 3 a 50 caracteres</div>
-  </div>
+	<header class="header-section">
+		<div class="header-navbar">
+			<div class="header-title">
+				<a class="title" href="PaginaPrincipalEncargado">Librería Sarasa</a>
+				<img src="html/Imagenes/art-libreria.png" class="img-title" alt="img-title" >
+			</div>
 
-  <input type="submit" class="btn btn-primary" value="Continuar">
-</form>
+			<div class="header-options">
+				<a class="nav-link" href="ListaStock">Productos</a>
+				<a class="nav-link" href="ListaPedidos">Despachar Pedidos</a>
+				<a class="nav-link" href="Logout">Cerrar Sesión</a>
+			</div>
+		</div>
+	</header>
 
+	<section class="alta">
+		<form method="POST">
+			<div class="form-group">
+				<label for="direccion">Direccion</label>
+				<input type="text" id="direccion" name="direccion" placeholder="Ingresar Direccion">
+				<p>Ingrese la direccion de 3 a 50 caracteres</p>
+			</div>
 
-<script src="js/jquery-3.3.1.slim.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+			<div class="buttons-wrapper">
+         	   <input type=submit class="volver" value="Continuar">
+			</div>
+
+		</form>
+	</section>
+
 </body>
 </html>
